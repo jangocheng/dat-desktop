@@ -2,5 +2,7 @@
 
 const browserify = require('../lib/browserify')
 
-const watch = process.argv[2] === 'watch'
-browserify({ watch })
+browserify({
+  watch: process.argv[2] === 'watch',
+  test: process.env.NODE_ENV === 'test'
+})
