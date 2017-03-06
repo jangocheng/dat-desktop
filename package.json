@@ -46,7 +46,7 @@
     "build-background": "./scripts/build background",
     "start": "NODE_ENV=development electron .",
     "test": "standard && npm run deps",
-    "test-dev": "NODE_ENV=test ./scripts/browserify.js && cat test/bundle.js | tape-run",
+    "test-dev": "NODE_ENV=test ./scripts/browserify.js && cat test/bundle.js | tape-run --node",
     "postinstall": "./scripts/build postinstall",
     "pack": "build --dir",
     "dist": "build --publish=onTagOrDraft"
@@ -63,7 +63,7 @@
     "sheetify-nested": "^1.0.2",
     "standard": "^7.1.2",
     "tape": "^4.6.3",
-    "tape-run": "^2.2.1",
+    "tape-run": "^2.4.1",
     "through2": "^2.0.3",
     "watchify": "^3.7.0"
   },
